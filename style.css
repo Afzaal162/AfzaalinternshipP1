@@ -578,6 +578,29 @@ html {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
+@media (max-width: 992px) {
+  .team-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .our-team-intro h2 {
+    font-size: 1.8rem;
+  }
+}
 
 /* Animation for fade-in */
 .show {
@@ -896,4 +919,5 @@ html {
     flex: 1 1 100%;
   }
 }
+
 
