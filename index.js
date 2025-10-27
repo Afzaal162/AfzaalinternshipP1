@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 // ===== Reusable Scroll Animation Function =====
 function animateOnScroll(selector, visibleClass = 'visible', threshold = 0.2) {
   const elements = document.querySelectorAll(selector);
@@ -61,5 +62,6 @@ animateOnScroll('.animate-on-scroll');
 animateOnScroll('.animate-left, .animate-right');
 animateOnScroll('.team-card', 'show');
 animateOnScroll('.review-card', 'show');
+
 
 
