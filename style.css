@@ -919,5 +919,28 @@ html {
     flex: 1 1 100%;
   }
 }
+/* ===== GLOBAL FIX FOR MOBILE OVERFLOW ===== */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure all major sections don’t exceed screen width */
+section, .navbar, .hero, .container, .feature-section,
+.about-section, .team-section, .blog-section,
+.contact-section, .footer {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Prevent large paddings from pushing content on small screens */
+@media (max-width: 600px) {
+  .hero, .feature-section, .about-section,
+  .contact-section, .team-section, .blog-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 
 
