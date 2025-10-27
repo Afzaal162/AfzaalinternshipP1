@@ -968,9 +968,15 @@ html, body {
 }
 
 /* Ensure all major sections don’t exceed screen width */
-section, .navbar, .hero, .container, .feature-section,
-.about-section, .team-section, .blog-section,
-.contact-section, .footer {
+section,
+.hero,
+.container,
+.feature-section,
+.about-section,
+.team-section,
+.blog-section,
+.contact-section,
+.footer {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -983,6 +989,7 @@ section, .navbar, .hero, .container, .feature-section,
     padding-right: 15px;
   }
 }
+
 
 
 
