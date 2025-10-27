@@ -2,12 +2,23 @@
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
-menuToggle?.addEventListener("click", () => navLinks.classList.toggle("show"));
-
-// Dropdown toggle (mobile)
-document.querySelectorAll(".nav-links li").forEach(li => {
-  li.addEventListener("click", () => li.classList.toggle("active"));
+menuToggle?.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
 });
+
+// ===== Dropdown Toggle (Mobile) =====
+document.querySelectorAll(".nav-links li").forEach(li => {
+  const hasDropdown = li.querySelector(".dropdown");
+
+  if (hasDropdown) {
+    li.addEventListener("click", e => {
+      e.preventDefault(); // stop link from navigating
+      e.stopPropagation(); // stop bubbling
+      li.classList.toggle("active");
+    });
+  }
+});
+
 
 // ===== Reusable Scroll Animation Function =====
 function animateOnScroll(selector, visibleClass = 'visible', threshold = 0.2) {
@@ -29,3 +40,4 @@ animateOnScroll('.animate-on-scroll');
 animateOnScroll('.animate-left, .animate-right');
 animateOnScroll('.team-card', 'show');
 animateOnScroll('.review-card', 'show');
+
