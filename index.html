@@ -1,451 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Imagine — Navbar + 6 Cards Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Jadoo — Travel Landing</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="Travel landing page — hero animation demo"
+    />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Volkhov:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
   </head>
   <body>
-    <!-- Navigation Bar -->
-   <nav class="navbar">
-      <div class="logo">
-        <a href="#hero">
-          <span
-            ><span class="brand-name">Imagine</span
-            ><span class="brand-dot">.</span></span
-          >
-        </a>
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-text">
+        <div class="brand-name">Jadoo</div>
       </div>
+    </div>
 
-      <div class="menu-toggle" id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
+    <!-- Desktop nav links (kept inside nav for semantic reasons) -->
+    <nav class="menu" id="menu" aria-label="Main menu">
+      <a href="#destinations">Destinations</a>
+      <a href="#hotels">Hotels</a>
+      <a href="#flights">Flights</a>
+      <a href="#bookings">Bookings</a>
+
+      <!-- Auth buttons for mobile (kept inside .menu so they show only when menu is visible on small screens) -->
+      <div class="auth-mobile">
+        <a class="login" href="#">Login</a>
+        <a class="signup" href="#">Sign up</a>
       </div>
-      <!-- nav links -->
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#about">About</a></li>
-        <li>
-          <a href="#features">Services ▾</a>
-          <div class="dropdown">
-            <a href="#">Web Design</a>
-            <a href="#">App Development</a>
-            <a href="#">SEO Optimization</a>
-          </div>
-        </li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#testimonial">Testimonial</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
     </nav>
 
+    <!-- Hamburger toggle (visible on mobile) -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+
+
+
+
     <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="hero-content">
-        <h1>We Build Creative Digital Experiences</h1>
-        <p>
-          Transforming your ideas into powerful web and app solutions that
-          connect, engage, and inspire your audience.
-        </p>
-        <button class="btn">Learn More</button>
-      </div>
-      <div class="hero-image"></div>
+    <section class="hero">
+        <div class="hero-container">
+            <!-- Left Content -->
+            <div class="hero-content">
+                <p class="hero-tag">BEST DESTINATIONS AROUND THE WORLD</p>
+                
+                <h1 class="hero-title">
+                    Travel, enjoy<br>
+                    and live a new<br>
+                    and full life
+                </h1>
+                
+                <p class="hero-description">
+                    Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.
+                </p>
+                
+                <div class="hero-buttons">
+                    <button class="btn-primary">Find out more</button>
+                    
+                    <button class="play-button">
+                        <div class="play-icon"></div>
+                        <span>Play Demo</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Content - Image -->
+            <div class="hero-image">
+                <img src="./Images/Herosection image.png" alt="Traveler with backpack">
+                
+                <!-- Decorative Elements -->
+                <div class="decoration decoration-1"></div>
+                <div class="decoration decoration-2"></div>
+                
+                <!-- Floating Planes -->
+                <div class="plane plane-1">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                    </svg>
+                </div>
+                
+                <div class="plane plane-2">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
     </section>
-    <br />
 
-    <!-- 6 Cards Section -->
-    <section class="features-section" id="features">
-      <h2 class="animate-on-scroll">Imagine Features</h2>
+    <section class="services">
+      <h2 class="section-title">We Offer Best Services</h2>
+     <div class="card-container">
+  <div class="card">
+    <div class="icon"><i class="fa-solid fa-cloud-sun"></i></div>
+    <div class="card-content">
+      <h3>Weather</h3>
+      <p>Built Wicket longer admire do barton vanity itself.</p>
+    </div>
+  </div>
 
-      <div class="container">
-        <div class="card animate-on-scroll">
-          <img src="./images/market-analysis.webp" alt="Marketing Consulting" />
-          <h3>Marketing Consulting</h3>
-          <p>
-            Grow your business with smart marketing strategies and expert
-            guidance.
-          </p>
-          <button>Learn More</button>
-        </div>
+  <div class="card">
+    <div class="icon"><i class="fa-solid fa-plane-departure"></i></div>
+    <div class="card-content">
+      <h3>Best Flights</h3>
+      <p>Engrossed listening. Park gate sell they west hard.</p>
+    </div>
+  </div>
 
-        <div class="card animate-on-scroll">
-          <img
-            src="./images/photo_three-people-looking-at-computer.jpg"
-            alt="Market Analysis"
-          />
-          <h3>Market Analysis</h3>
-          <p>
-            Gain insights into your customers and make data-driven decisions.
-          </p>
-          <button>Learn More</button>
-        </div>
+  <div class="card">
+    <div class="icon"><i class="fa-solid fa-calendar-days"></i></div>
+    <div class="card-content">
+      <h3>Local Events</h3>
+      <p>Barton vanity itself do in it. Preferred to men.</p>
+    </div>
+  </div>
 
-        <div class="card animate-on-scroll">
-          <img src="./images/images (6).png" alt="Easy Purchase" />
-          <h3>Easy Purchase</h3>
-          <p>
-            Fast, secure, and convenient purchasing process for every customer.
-          </p>
-          <button>Learn More</button>
-        </div>
+  <div class="card">
+    <div class="icon"><i class="fa-solid fa-sliders"></i></div>
+    <div class="card-content">
+      <h3>Customization</h3>
+      <p>We deliver outsourced aviation services for military.</p>
+    </div>
+  </div>
+</div>
+<section class="top-destinations">
+  <div class="container">
+    <p class="section-subtitle">Top Selling</p>
+    <h2 class="section-title">Vacation Points</h2>
 
-        <div class="card animate-on-scroll">
-          <img
-            src="./images/vector-illustration-modern-label-new-260nw-1520423249.webp"
-            alt="Free Updates"
-          />
-          <h3>Free Updates</h3>
-          <p>Enjoy free product updates and improvements regularly.</p>
-          <button>Learn More</button>
-        </div>
-
-        <div class="card animate-on-scroll">
-          <img
-            src="./images/360_F_302829249_sGra3Q1AdTozqXHBHjzbwM8rkY4dtvOc.jpg"
-            alt="Satisfied Clients"
-          />
-          <h3>100% Satisfaction</h3>
-          <p>Our clients’ happiness is our top priority in every project.</p>
-          <button>Learn More</button>
-        </div>
-
-        <div class="card animate-on-scroll">
-          <img
-            src="./images/vector-illustration-modern-label-new-260nw-1520423249.webp"
-            alt="Easy Plugin"
-          />
-          <h3>Easy Plugin</h3>
-          <p>Install in minutes — no coding required, just plug and play.</p>
-          <button>Learn More</button>
-        </div>
-      </div>
-    </section>
-    <section class="feature-section" id="features">
-      <div class="feature-image animate-left">
-        <img
-          src="./images/undraw_gift_card_6ekc.svg"
-          alt="Feedback Illustration"
-        />
-      </div>
-
-      <div class="feature-text animate-right">
-        <h2>Communicate and gather feedback</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-          neque nisi architecto autem molestias corrupti officia veniam.
-        </p>
-
-        <div class="testimonial">
-          <img src="./images/person_4.jpg.webp" alt="Profile" />
-          <div>
-            <h4>Grey Simpson</h4>
-            <p>Co-Founder, XYZ Inc.</p>
-            <blockquote>
-              “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
-              vitae ipsa asperiores inventore aperiam iure?”
-            </blockquote>
+    <div class="cards">
+      <div class="card-2">
+        <img src="./Images/Rome.avif" alt="Rome, Italy">
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Rome, Italy</h3>
+            <span>$5.42k</span>
           </div>
+          <p><i class="fa-solid fa-paper-plane"></i> 10 Days Trip</p>
         </div>
       </div>
-    </section>
-    <section class="feature-section">
-      <div class="feature-text animate-right">
-        <h2>Communicate and gather feedback</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-          neque nisi architecto autem molestias corrupti officia veniam.
-        </p>
 
-        <div class="testimonial">
-          <img src="./images/person_1.jpg.webp" alt="Profile" />
-          <div>
-            <h4>Kimberly Gush</h4>
-            <p>Co-Founder, XYZ Inc.</p>
-            <blockquote>
-              “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
-              vitae ipsa asperiores inventore aperiam iure?”
-            </blockquote>
+      <div class="card-2">
+        <img src="./Images/London.jpg" alt="London, UK">
+        <div class="card-content">
+          <div class="card-header">
+            <h3>London, UK</h3>
+            <span>$4.2k</span>
           </div>
+          <p><i class="fa-solid fa-paper-plane"></i> 12 Days Trip</p>
         </div>
       </div>
-      <div class="feature-image animate-left">
-        <img
-          src="./images/undraw_gift_card_6ekc.svg"
-          alt="Feedback Illustration"
-        />
-      </div>
-    </section>
-    <section class="feature-section">
-      <div class="feature-image animate-left">
-        <img
-          src="./images/undraw_gift_card_6ekc.svg"
-          alt="Feedback Illustration"
-        />
-      </div>
 
-      <div class="feature-text animate-right">
-        <h2>Communicate and gather feedback</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-          neque nisi architecto autem molestias corrupti officia veniam.
-        </p>
-
-        <div class="testimonial">
-          <img src="./images/person_4.jpg.webp" alt="Profile" />
-          <div>
-            <h4>Grey Simpson</h4>
-            <p>Co-Founder, XYZ Inc.</p>
-            <blockquote>
-              “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
-              vitae ipsa asperiores inventore aperiam iure?”
-            </blockquote>
+      <div class="card-2">
+        <img src="./Images/Helsinki, Finland.jpeg" alt="Helsinki, Finland">
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Helsinki, Finland</h3>
+            <span>$15k</span>
           </div>
+          <p><i class="fa-solid fa-paper-plane"></i> 28 Days Trip</p>
         </div>
       </div>
-    </section>
-    <section class="feature-section">
-      <div class="feature-text animate-right">
-        <h2>Communicate and gather feedback</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-          neque nisi architecto autem molestias corrupti officia veniam.
-        </p>
+    </div>
+  </div>
+</section>
+<section class="booking-section">
+  <div class="booking-container">
+    <!-- LEFT SIDE -->
+    <div class="booking-text animate-left">
+      <h4 class="small-title">EASY AND FAST</h4>
+      <h2 class="main-title">Book Your Next Trip <br> In 3 Easy Steps</h2>
 
-        <div class="testimonial">
-          <img src="./images/person_1.jpg.webp" alt="Profile" />
-          <div>
-            <h4>Kimberly Gush</h4>
-            <p>Co-Founder, XYZ Inc.</p>
-            <blockquote>
-              “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
-              vitae ipsa asperiores inventore aperiam iure?”
-            </blockquote>
-          </div>
+      <div class="step">
+        <div class="icon yellow"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="step-text">
+          <h3>Choose Destination</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
         </div>
       </div>
-      <div class="feature-image animate-left">
-        <img
-          src="./images/undraw_metrics_gtu7 (1).svg"
-          alt="Feedback Illustration"
-        />
-      </div>
-    </section>
-    <!-- About us Section -->
-    <section class="about-section" id="about">
-      <h2 class="about-title">About Us</h2>
 
-      <div class="about-container">
-        <!-- Left Image -->
-        <div class="about-image box animate-left">
-          <img
-            src="./images/undraw_bookmarks_r6up.svg"
-            alt="About Us Illustration"
-          />
-        </div>
-
-        <!-- Right Text -->
-        <div class="about-content box animate-right">
-          <h3>Our Mission</h3>
-          <p>
-            We aim to deliver innovative digital solutions that combine
-            creativity and technology. Our mission is to help brands connect
-            deeply with their audiences through impactful design and smart
-            strategies.
-          </p>
-
-          <ul>
-            <li>✔ Creative and strategic solutions</li>
-            <li>✔ Client-focused approach</li>
-            <li>✔ Dedicated to long-term success</li>
-          </ul>
-
-          <button class="btn">Learn More</button>
+      <div class="step">
+        <div class="icon red"><i class="fas fa-credit-card"></i></div>
+        <div class="step-text">
+          <h3>Make Payment</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
         </div>
       </div>
-    </section>
-    <!-- Team Section -->
-    <section class="team-section" id="team">
-      <h1 class="title">Meet Our Team</h1>
-      <div class="team-container">
-        <div class="team-card">
-          <img src="./images/person_1.jpg.webp" alt="Cloe Marena" />
-          <h3>Cloe Marena</h3>
-          <p class="position">President</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
-            excepturi corporis qui doloribus perspiciatis ipsa modi accusantium
-            repellat.
-          </p>
-        </div>
 
-        <div class="team-card">
-          <img src="./images/person_2.jpg.webp" alt="John Rooster" />
-          <h3>John Rooster</h3>
-          <p class="position">Marketing</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
-            excepturi corporis qui doloribus perspiciatis ipsa modi accusantium
-            repellat.
-          </p>
-        </div>
-
-        <div class="team-card">
-          <img src="./images/person_3.jpg.webp" alt="Will Turner" />
-          <h3>Will Turner</h3>
-          <p class="position">Marketing</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
-            excepturi corporis qui doloribus perspiciatis ipsa modi accusantium
-            repellat.
-          </p>
-        </div>
-        <div class="team-card">
-          <img src="./images/person_4.jpg (1).webp" alt="Cloe Marena" />
-          <h3>Cloe Marena</h3>
-          <p class="position">President</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
-            excepturi corporis qui doloribus perspiciatis ipsa modi accusantium
-            repellat.
-          </p>
-        </div>
-
-        <div class="team-card">
-          <img src="./images/person_5.jpg.webp" alt="John Rooster" />
-          <h3>John Rooster</h3>
-          <p class="position">Marketing</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
-            excepturi corporis qui doloribus perspiciatis ipsa modi accusantium
-            repellat.
-          </p>
-        </div>
-
-        <div class="team-card">
-          <img src="./images/person_6.jpg.webp" alt="Will Turner" />
-          <h3>Will Turner</h3>
-          <p class="position">Marketing</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
-            excepturi corporis qui doloribus perspiciatis ipsa modi accusantium
-            repellat.
-          </p>
+      <div class="step">
+        <div class="icon blue"><i class="fas fa-car-side"></i></div>
+        <div class="step-text">
+          <h3>Reach Airport on Selected Date</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
         </div>
       </div>
-    </section>
-    <section class="review-section"  id="testimonial">
-      <h2 class="title">What Our Clients Say</h2>
+    </div>
 
-      <div class="review-carousel">
-        <div class="review-card active">
-          <img src="./images/person_1.jpg (1).webp" alt="Sarah Johnson" />
-          <p>“This company exceeded my expectations! Highly recommended.”</p>
-          <h3>- Sarah Johnson</h3>
-        </div>
-
-        <div class="review-card">
-          <img src="./images/person_2.jpg.webp" alt="David Miller" />
-          <p>
-            “Professional, creative, and reliable. I loved working with them.”
-          </p>
-          <h3>- David Miller</h3>
-        </div>
-
-        <div class="review-card">
-          <img src="./images/person_3.jpg.webp" alt="Emily Carter" />
-          <p>“Their attention to detail and design quality is amazing.”</p>
-          <h3>- Emily Carter</h3>
+    <!-- RIGHT SIDE -->
+    <div class="booking-card animate-right">
+      <img src="./Images/Geerce.webp" alt="Trip to Greece" class="card-img" />
+      <div class="card-content">
+        <h3>Trip To Greece</h3>
+        <p>14–29 June | by Robbin Joseph</p>
+        <div class="people">
+          <i class="fas fa-user-friends"></i>
+          <span>24 people going</span>
         </div>
       </div>
-    </section>
-    <!-- blog -->
-    <section class="blog-section">
-      <h2 class="blog-title">Blog Posts</h2>
-      <div class="blog-container">
-        <div class="blog-card">
-          <img src="./images/img_1.jpg.webp" alt="Cat Coffee" />
-          <h3>Make Your Business More Profitable</h3>
-          <p class="meta">
-            Ham Brook • Jan 18, 2019 • <span class="tag">News</span>
-          </p>
-          <p class="desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-            eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit.
-          </p>
+    </div>
+  </div>
+</section>
+<section class="testimonials">
+  <div class="testimonials-content">
+    <h4>TESTIMONIALS</h4>
+    <h2>What People Say<br>About Us.</h2>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <div class="testimonial-card">
+    <img src="./Images/Testimonials.jpeg" alt="User" class="profile-img" />
+    <p class="testimonial-text">
+      "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no."
+    </p>
+    <h3>Mike Taylor</h3>
+    <p class="location">Lahore, Pakistan</p>
+  </div>
+</section>
+<!-- airline -->
+ <section class="airlines">
+  <div class="airline">
+    <div class="icon" style="background: #e63946;">
+      <i class="fas fa-plane"></i>
+    </div>
+    <p>Emirates</p>
+  </div>
+
+  <div class="airline">
+    <div class="icon" style="background: #6a0572;">
+      <i class="fas fa-plane"></i>
+    </div>
+    <p>Qatar Airways</p>
+  </div>
+
+  <div class="airline">
+    <div class="icon" style="background: #007f5f;">
+      <i class="fas fa-plane"></i>
+    </div>
+    <p>PIA</p>
+  </div>
+
+  <div class="airline">
+    <div class="icon" style="background: #003049;">
+      <i class="fas fa-plane"></i>
+    </div>
+    <p>Singapore Airlines</p>
+  </div>
+</section>
+<!-- newsletter section -->
+ <section class="newsletter-section">
+        <div class="monitor-icon">
+            <svg viewBox="0 0 24 24" fill="#5a5a7d" opacity="0.3">
+                <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+        </div>
+        
+        <div class="newsletter-content">
+            <h2>Subscribe to get information, latest<br>news and other interesting offers<br>about Jadoo</h2>
+            
+            <form class="subscription-form" onsubmit="return false;">
+                <div class="email-input-wrapper">
+                    <span class="email-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M22 7L12 13 2 7"/>
+                        </svg>
+                    </span>
+                    <input type="email" class="email-input" placeholder="Your email" required>
+                </div>
+                <button type="submit" class="subscribe-btn">Subscribe</button>
+            </form>
         </div>
 
-        <div class="blog-card">
-          <img src="./images/img_2.jpg.webp" alt="Tablet Workspace" />
-          <h3>Make Your Business More Profitable</h3>
-          <p class="meta">
-            James Phelps • Jan 18, 2019 • <span class="tag">News</span>
-          </p>
-          <p class="desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-            eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit.
-          </p>
+        <div class="paper-plane">
+            <svg viewBox="0 0 24 24">
+                <path d="M3 20L21 12 3 4 3 11 15 12 3 13z"/>
+            </svg>
         </div>
-
-        <div class="blog-card">
-          <img src="./images/img_3.jpg.webp" alt="Businessman" />
-          <h3>Make Your Business More Profitable</h3>
-          <p class="meta">
-            James Phelps • Jan 18, 2019 • <span class="tag">News</span>
-          </p>
-          <p class="desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-            eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-      <div class="contact-container">
-        <div class="contact-info">
-          <h2>Get In Touch</h2>
-          <p>
-            We’d love to hear from you. Fill out the form below or reach us
-            through the provided contact details.
-          </p>
-          <ul>
-            <li><strong>Address:</strong> Rawalpindi, Pakistan</li>
-            <li><strong>Phone:</strong> +92 300 1234567</li>
-            <li><strong>Email:</strong> info@imagine.com</li>
-          </ul>
-        </div>
-
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="footer-container">
-        <p>© 2025 Imagine. All Rights Reserved.</p>
-        <div class="footer-links">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Blog</a>
-          <a href="#">Contact</a>
+    <footer>
+        <div class="footer-brand">
+            <div class="brand-logo">
+                <span class="plane-icon">✈</span>
+                Jadoo
+            </div>
+            <p class="brand-tagline">Book your trip in minute, get full Control for much longer.</p>
         </div>
-      </div>
+
+        <div class="footer-column">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Mobile</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <ul>
+                <li><a href="#">Help/FAQ</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Affiliates</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>More</h3>
+            <ul>
+                <li><a href="#">Airlinefees</a></li>
+                <li><a href="#">Airline</a></li>
+                <li><a href="#">Low fare tips</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column social-section">
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="app-download">
+                <p>Discover our app</p>
+            </div>
+        </div>
     </footer>
+
+    <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </div>
+     <div class="footer-bottom">
+    <p>All rights reserved © 2025 <span>Jadoo</span></p>
+  </div>
+
+
 
     <script src="index.js"></script>
   </body>
 </html>
-
-
